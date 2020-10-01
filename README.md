@@ -1,4 +1,4 @@
-# terraform-azure-tfstate-backend 
+# terraform-azurerm-tfstate-backend 
 
 ## Usage
 
@@ -38,7 +38,7 @@ terraform init -force-copy
 
 ### Unlock the Terraform Azure remote state backend destroy prevention
 
-This is a workaround due to [thie issue](https://github.com/hashicorp/terraform/issues/22544): disable destroy prevention in the Storage Account and Storage Container resources, by manually setting `prevent_destroy` to false in the `lifecycle` block for each resource of the module (`.terraform/modules/terraform-azure-tfstate-backend` file):
+This is a workaround due to [thie issue](https://github.com/hashicorp/terraform/issues/22544): disable destroy prevention in the Storage Account and Storage Container resources, by manually setting `prevent_destroy` to false in the `lifecycle` block for each resource of the module (`.terraform/modules/terraform-azurerm-tfstate-backend` file):
 
 ```
 resource "azurerm_storage_container" "main" {
